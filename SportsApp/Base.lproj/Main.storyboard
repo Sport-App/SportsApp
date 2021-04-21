@@ -66,25 +66,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="13a-Ch-Rog">
-                                                    <rect key="frame" x="30" y="7" width="120" height="121"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="120" id="7Hc-km-OCY"/>
-                                                        <constraint firstAttribute="width" constant="120" id="hlk-y2-xvI"/>
-                                                    </constraints>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="13a-Ch-Rog">
+                                                    <rect key="frame" x="20" y="19" width="140" height="21"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JTU-hi-tOX">
-                                                    <rect key="frame" x="66" y="148" width="48" height="24"/>
+                                                    <rect key="frame" x="66" y="136" width="48" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="JTU-hi-tOX" firstAttribute="centerX" secondItem="CsO-Of-xbI" secondAttribute="centerX" id="iFS-aa-lD0"/>
-                                                <constraint firstItem="13a-Ch-Rog" firstAttribute="top" secondItem="CsO-Of-xbI" secondAttribute="top" constant="8" id="szv-yF-Jg4"/>
-                                                <constraint firstItem="13a-Ch-Rog" firstAttribute="centerX" secondItem="CsO-Of-xbI" secondAttribute="centerX" id="xTA-P1-IFY"/>
-                                                <constraint firstItem="JTU-hi-tOX" firstAttribute="top" secondItem="13a-Ch-Rog" secondAttribute="bottom" constant="20" id="zLY-R4-G4w"/>
+                                                <constraint firstItem="13a-Ch-Rog" firstAttribute="leading" secondItem="CsO-Of-xbI" secondAttribute="leading" constant="20" id="4Fb-T6-a59"/>
+                                                <constraint firstItem="13a-Ch-Rog" firstAttribute="top" secondItem="CsO-Of-xbI" secondAttribute="top" constant="20" id="BD7-ZR-rVe"/>
+                                                <constraint firstItem="13a-Ch-Rog" firstAttribute="centerX" secondItem="CsO-Of-xbI" secondAttribute="centerX" id="Mm4-Bu-KcI"/>
+                                                <constraint firstItem="JTU-hi-tOX" firstAttribute="centerX" secondItem="CsO-Of-xbI" secondAttribute="centerX" id="MyK-0e-7GX"/>
+                                                <constraint firstAttribute="trailing" secondItem="13a-Ch-Rog" secondAttribute="trailing" constant="20" id="b3Z-0e-MtA"/>
+                                                <constraint firstAttribute="bottom" secondItem="JTU-hi-tOX" secondAttribute="bottom" constant="20" id="jcF-ai-RFg"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
