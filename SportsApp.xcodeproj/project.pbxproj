@@ -3,12 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0120066945321DE82A5A7D14 /* Pods_SportsApp_SportsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BBAE3F4881CBCEC1C35BED /* Pods_SportsApp_SportsAppUITests.framework */; };
 		3D8E06C72BA34F0E7EEAA3E4 /* Pods_SportsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BFCF2F75BCF774431AC4316 /* Pods_SportsAppTests.framework */; };
+		D39549562630A536000B9D29 /* LeaguesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39549552630A536000B9D29 /* LeaguesViewController.swift */; };
+		D395495C2630A59C000B9D29 /* LeaguesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D395495A2630A59C000B9D29 /* LeaguesTableViewCell.swift */; };
+		D39549652630A95E000B9D29 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39549642630A95E000B9D29 /* League.swift */; };
+		D395496A2630AEBC000B9D29 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39549692630AEBC000B9D29 /* URLs.swift */; };
 		D3C372A5262E24A500C25080 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C372A4262E24A500C25080 /* AppDelegate.swift */; };
 		D3C372A7262E24A500C25080 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C372A6262E24A500C25080 /* SceneDelegate.swift */; };
 		D3C372A9262E24A500C25080 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C372A8262E24A500C25080 /* ViewController.swift */; };
@@ -47,6 +51,10 @@
 		BE3B55902571FBB8A0B49A80 /* Pods-SportsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportsApp.release.xcconfig"; path = "Target Support Files/Pods-SportsApp/Pods-SportsApp.release.xcconfig"; sourceTree = "<group>"; };
 		D0EEACE6DE31022DDF8A3BC0 /* Pods-SportsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportsAppTests.release.xcconfig"; path = "Target Support Files/Pods-SportsAppTests/Pods-SportsAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		D1B4E7499360CB20214EB406 /* Pods-SportsApp-SportsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportsApp-SportsAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-SportsApp-SportsAppUITests/Pods-SportsApp-SportsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D39549552630A536000B9D29 /* LeaguesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesViewController.swift; sourceTree = "<group>"; };
+		D395495A2630A59C000B9D29 /* LeaguesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesTableViewCell.swift; sourceTree = "<group>"; };
+		D39549642630A95E000B9D29 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		D39549692630AEBC000B9D29 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		D3C372A1262E24A500C25080 /* SportsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C372A4262E24A500C25080 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3C372A6262E24A500C25080 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,7 +111,6 @@
 				5B0BAF2339041B2EDCBA1763 /* Pods-SportsAppTests.debug.xcconfig */,
 				D0EEACE6DE31022DDF8A3BC0 /* Pods-SportsAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -150,6 +157,10 @@
 				D3C372B2262E24A800C25080 /* LaunchScreen.storyboard */,
 				D3C372B5262E24A800C25080 /* Info.plist */,
 				D3C372AD262E24A500C25080 /* SportsApp.xcdatamodeld */,
+				D39549552630A536000B9D29 /* LeaguesViewController.swift */,
+				D395495A2630A59C000B9D29 /* LeaguesTableViewCell.swift */,
+				D39549642630A95E000B9D29 /* League.swift */,
+				D39549692630AEBC000B9D29 /* URLs.swift */,
 			);
 			path = SportsApp;
 			sourceTree = "<group>";
@@ -410,9 +421,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39549652630A95E000B9D29 /* League.swift in Sources */,
 				D3C372A9262E24A500C25080 /* ViewController.swift in Sources */,
 				D3C372A5262E24A500C25080 /* AppDelegate.swift in Sources */,
+				D395496A2630AEBC000B9D29 /* URLs.swift in Sources */,
+				D39549562630A536000B9D29 /* LeaguesViewController.swift in Sources */,
 				D3C372AF262E24A500C25080 /* SportsApp.xcdatamodeld in Sources */,
+				D395495C2630A59C000B9D29 /* LeaguesTableViewCell.swift in Sources */,
 				D3C372A7262E24A500C25080 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
