@@ -20,11 +20,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="R2F-OO-vwJ"/>
-                    <connections>
-                        <segue destination="ZPM-uh-ffm" kind="popoverPresentation" id="183-Qc-fED">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pk8-wL-i5S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -148,22 +143,11 @@
                     <tabBarItem key="tabBarItem" title="Sports" image="sportscourt" catalog="system" id="PXy-sE-Z2I"/>
                     <connections>
                         <outlet property="collection" destination="FMH-mU-xiK" id="Pcv-eE-Dqq"/>
-                        <segue destination="ZPM-uh-ffm" kind="popoverPresentation" id="H3L-at-06c">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uYt-WQ-vEN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2124.6376811594205" y="-323.4375"/>
-        </scene>
-        <!--SportsViewcontroller-->
-        <scene sceneID="GSn-Xa-t2o">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="SportsViewcontroller" id="ZPM-uh-ffm" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="czp-66-peg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2175" y="74"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="d1u-q4-i3q">
@@ -177,9 +161,6 @@
                     <connections>
                         <segue destination="0EY-fc-iKF" kind="relationship" relationship="viewControllers" id="Yxp-9H-hDO"/>
                         <segue destination="sXe-l3-pT5" kind="relationship" relationship="viewControllers" id="BzE-Mt-tAM"/>
-                        <segue destination="ZPM-uh-ffm" kind="popoverPresentation" id="mGB-C7-e4C">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y7W-uN-tsj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -187,9 +168,6 @@
             <point key="canvasLocation" x="1237" y="98"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="H3L-at-06c"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="sportscourt" catalog="system" width="128" height="84"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
