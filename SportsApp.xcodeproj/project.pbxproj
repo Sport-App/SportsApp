@@ -171,7 +171,7 @@
 				D3FC21D026330FB600D803A4 /* Model */,
 				D3FC21D12633102A00D803A4 /* View */,
 				D3FC21D22633104C00D803A4 /* ViewModel */,
-				D3FC21702633048D00D803A4 /* entity */,
+				D3FC21702633048D00D803A4 /* Entity */,
 				D3C372A4262E24A500C25080 /* AppDelegate.swift */,
 				D3C372A6262E24A500C25080 /* SceneDelegate.swift */,
 				D3C372A8262E24A500C25080 /* ViewController.swift */,
@@ -201,15 +201,15 @@
 			path = SportsAppUITests;
 			sourceTree = "<group>";
 		};
-		D3FC21702633048D00D803A4 /* entity */ = {
+		D3FC21702633048D00D803A4 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 				D3FC21D8263311A300D803A4 /* League.swift */,
 				D3FC21FE263319F900D803A4 /* Sport.swift */,
 				D3FC220326331A2400D803A4 /* Sports.swift */,
 			);
-			name = entity;
-			path = ../../../../../../../Desktop/entity;
+			name = Entity;
+			path = ../../../../../../../Desktop/Entity;
 			sourceTree = "<group>";
 		};
 		D3FC21D026330FB600D803A4 /* Model */ = {
