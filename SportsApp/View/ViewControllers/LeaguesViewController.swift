@@ -13,6 +13,7 @@ class LeaguesViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var leagueTableView: UITableView!
+    @IBOutlet weak var backView: UIButton!
     
     var leaguesDetails = [LeagueDetails]()
     var sportName = "Soccer"
@@ -20,8 +21,10 @@ class LeaguesViewController: UIViewController {
     var type: ViewType = .fav
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        viewModel = LeaguesViewModel(sportsName: sportName)
+        if(type == .fav){
+            backView.isHidden = true
+        }
+        viewModel = LeaguesViewModel(sportsName: sportName , type: type , appDelegate: UIApplication.shared.delegate as! AppDelegate)
         viewModel.getLeagues()
         viewModel.bindLeaguestoView = didReceiveData
         viewModel.bindErrortoView = didReceiveError

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hkv-qY-LeM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hkv-qY-LeM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -144,30 +144,16 @@
                             <constraint firstAttribute="bottom" secondItem="J7H-F9-MVb" secondAttribute="bottom" id="cSG-GV-s1L"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" selectedImage="heart.fill" catalog="system" systemItem="favorites" id="KSF-rB-t6n"/>
                     <connections>
+                        <outlet property="backView" destination="H4w-ZQ-1jU" id="Xth-KB-z8I"/>
                         <outlet property="leagueTableView" destination="Kdr-mi-VQh" id="tDg-Mj-5ag"/>
                         <outlet property="searchBar" destination="YI3-mY-LGd" id="xVz-PV-3Mc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2761" y="54"/>
-        </scene>
-        <!--Item 2-->
-        <scene sceneID="IMc-jV-Arr">
-            <objects>
-                <viewController id="cRF-h3-rtX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cHz-P2-hne">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="AJa-Z4-BCI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="cQZ-KT-fK6"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H9M-Hq-5hq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1881" y="453"/>
+            <point key="canvasLocation" x="1900" y="338"/>
         </scene>
         <!--Sports-->
         <scene sceneID="VPI-SY-LtT">
@@ -304,7 +290,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="1Wk-ko-ln5" kind="relationship" relationship="viewControllers" id="4bs-yF-vOB"/>
-                        <segue destination="cRF-h3-rtX" kind="relationship" relationship="viewControllers" id="Y4v-1Z-vdS"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="82v-rh-rMI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdj-Cn-nc1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -314,6 +300,7 @@
     </scenes>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="play.rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="sportscourt" catalog="system" width="128" height="84"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>

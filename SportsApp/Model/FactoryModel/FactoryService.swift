@@ -14,7 +14,12 @@ enum ViewType {
 
 class FactoryService {
     
-    func build() -> DataSourceDelegate {
-        return NetworkService()
+    func build(type : ViewType , appDelegate : AppDelegate) -> DataSourceDelegate {
+        switch type {
+        case .fav:
+            return OfflineService(appDelegate: appDelegate)
+        default:
+            return NetworkService()
+        }
     }
 }

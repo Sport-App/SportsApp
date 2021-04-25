@@ -13,10 +13,10 @@ class LeaguesViewModel {
     var dataSourceDelegate: DataSourceDelegate!
     var sportsName = String()
     
-    init(sportsName: String) {
+    
+    init(sportsName: String , type : ViewType , appDelegate:AppDelegate) {
         self.sportsName = sportsName
-        
-        dataSourceDelegate = factory.build()
+        dataSourceDelegate = factory.build(type: type, appDelegate: appDelegate)
         dataSourceDelegate.sportsName = sportsName
     }
     
