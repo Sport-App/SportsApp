@@ -29,7 +29,21 @@ class NetworkService: DataSourceDelegate {
             }
         }
     }
-    
+    func getTeamById(id : String,completion: @escaping (Team?, Error?) -> ()) {
+        AF.request(URLs.getTeamDetailsById+id).validate().responseDecodable(of: Teams.self) { (response) in
+            
+            switch response.result {
+                case .success( _):
+                        
+                    guard let data = response.value else { return }
+                    completion(data.teams[0], nil)
+                    
+                case .failure(let error):
+                    print(error)
+                    completion(nil, error)
+            }
+        }
+    }
     func getLeagues(completion: @escaping ([LeagueDetails]?, Error?) -> ()) {
         AF.request(URLs.getLeagues).validate().responseDecodable(of: LeagueList.self) { (response) in
             

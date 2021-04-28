@@ -13,6 +13,7 @@ class URLs {
     static let getSports = baseUrl + "all_sports.php"
     static let getLeagues = baseUrl + "all_leagues.php"
     static let getLeagueDetailsById = baseUrl + "lookupleague.php?id="
-    
+    static let getTeamDetailsById = baseUrl + "lookupteam.php?id="
+
 }
 
