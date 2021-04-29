@@ -31,6 +31,7 @@
 		D3FC222C2633375600D803A4 /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC22292633375600D803A4 /* Sport.swift */; };
 		D3FC222D2633375600D803A4 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC222A2633375600D803A4 /* League.swift */; };
 		E290DC14263A2D6600389702 /* SportsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290DC13263A2D6600389702 /* SportsViewModelTest.swift */; };
+		E290DC19263A377C00389702 /* TeamViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290DC18263A377C00389702 /* TeamViewModelTest.swift */; };
 		E2D10B702638D30E006EF30E /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D10B6F2638D30E006EF30E /* TeamDetailsViewController.swift */; };
 		E2D10B752638D84C006EF30E /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D10B742638D84C006EF30E /* Teams.swift */; };
 		E2D10B7A2638DB4A006EF30E /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D10B792638DB4A006EF30E /* TeamViewModel.swift */; };
@@ -92,6 +93,7 @@
 		D3FC22292633375600D803A4 /* Sport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
 		D3FC222A2633375600D803A4 /* League.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
 		E290DC13263A2D6600389702 /* SportsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsViewModelTest.swift; sourceTree = "<group>"; };
+		E290DC18263A377C00389702 /* TeamViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModelTest.swift; sourceTree = "<group>"; };
 		E2D10B6F2638D30E006EF30E /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
 		E2D10B742638D84C006EF30E /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Teams.swift; path = SportsApp/entity/Teams.swift; sourceTree = SOURCE_ROOT; };
 		E2D10B792638DB4A006EF30E /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				D3C372BE262E24A800C25080 /* SportsAppTests.swift */,
 				D3C372C0262E24A800C25080 /* Info.plist */,
 				E290DC13263A2D6600389702 /* SportsViewModelTest.swift */,
+				E290DC18263A377C00389702 /* TeamViewModelTest.swift */,
 			);
 			path = SportsAppTests;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 			files = (
 				D3C372BF262E24A800C25080 /* SportsAppTests.swift in Sources */,
 				E290DC14263A2D6600389702 /* SportsViewModelTest.swift in Sources */,
+				E290DC19263A377C00389702 /* TeamViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
