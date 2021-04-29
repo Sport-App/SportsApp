@@ -25,6 +25,7 @@ class LeagueDetailsList: Codable {
 
 
 class LeagueDetails: Codable {
+    var idLeague: String
     var strYoutube: String?
     var strBadge: String?
     var strLeague: String?

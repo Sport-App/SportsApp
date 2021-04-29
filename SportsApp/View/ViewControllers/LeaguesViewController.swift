@@ -74,6 +74,14 @@ extension LeaguesViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "LeaguesDetailsViewController") as! LeaguesDetailsViewController
+        vc.modalPresentationStyle = .fullScreen
+        vc.leagueId = leaguesDetails[indexPath.row].idLeague
+        vc.leagueName = leaguesDetails[indexPath.row].strLeague!
+        present(vc, animated: true, completion: nil)
+    }
+    
     @objc func youtubeAction(button: UIButton){
         print(button.tag)
         

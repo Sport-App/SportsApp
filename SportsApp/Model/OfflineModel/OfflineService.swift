@@ -9,6 +9,8 @@ import Foundation
 import CoreData
 
 class OfflineService : DataSourceDelegate {
+    var leagueName = String()
+    var leagueId = String()
     var sportsName = String()
     var managedContext :NSManagedObjectContext
     var entity : NSEntityDescription
