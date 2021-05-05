@@ -10,8 +10,10 @@ import Foundation
 class LeaguesDetailsViewModel {
     let factory = FactoryService()
     var networkService = NetworkService()
+    var offlineService: OfflineService!
     
-    init(leagueName: String, leagueId: String) {
+    init(leagueName: String, leagueId: String, appDelegate: AppDelegate) {
+        offlineService = OfflineService(appDelegate: appDelegate)
         networkService.leagueName = leagueName
         networkService.leagueId = leagueId
     }
@@ -69,5 +71,17 @@ class LeaguesDetailsViewModel {
                 self.teams = teams!
             }
         }
+    }
+    
+    func addLeague(league: LeagueDetails) {
+        offlineService.add(league: league)
+    }
+    
+    func deleteLeague(leagueName: String) {
+        offlineService.delete(name: leagueName)
+    }
+    
+    func isFav(leaguesName: String) -> Bool {
+        return offlineService.isExist(name: leaguesName)
     }
 }

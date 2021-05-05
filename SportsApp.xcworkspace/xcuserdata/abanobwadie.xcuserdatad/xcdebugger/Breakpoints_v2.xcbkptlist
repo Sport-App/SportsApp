@@ -7,113 +7,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "770E8047-EA02-4CEB-A60E-54A218D34027"
+            uuid = "B1F7DC13-3C7D-4552-B9E5-6ACEDFB7123A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SportsApp/Model/NetworkModel/NetworkService.swift"
+            filePath = "SportsApp/ViewModel/LeaguesViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "getLeagueDetailsById(leagueId:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "770E8047-EA02-4CEB-A60E-54A218D34027 - e5d239992d59db2e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;SportsApp.EventsList, Alamofire.AFError&gt;) -&gt; () in SportsApp.NetworkService.getLatestAndUpcomingEvents(completion: (Swift.Optional&lt;Swift.Array&lt;SportsApp.Event&gt;&gt;, Swift.Optional&lt;Swift.Array&lt;SportsApp.Event&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SportsApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/abanobwadie/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/ITI/SportsApp/SportsApp/Model/NetworkModel/NetworkService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "578">
-               </Location>
-               <Location
-                  uuid = "770E8047-EA02-4CEB-A60E-54A218D34027 - 8e442e7ad26999e4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;SportsApp.Event&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Alamofire.DataResponse&lt;SportsApp.EventsList, Alamofire.AFError&gt;) -&gt; () in SportsApp.NetworkService.getLatestAndUpcomingEvents(completion: (Swift.Optional&lt;Swift.Array&lt;SportsApp.Event&gt;&gt;, Swift.Optional&lt;Swift.Array&lt;SportsApp.Event&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "SportsApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/abanobwadie/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/ITI/SportsApp/SportsApp/Model/NetworkModel/NetworkService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "182">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "087E3E68-2E20-4A2A-9EAF-E41A49A94899"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SportsApp/Model/NetworkModel/NetworkService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "getLatestAndUpcomingEvents(completion:)"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "getLeagues()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0D2AEBDB-D25F-4482-BE32-DB995FD9F9B7"
+            uuid = "3EE4A46A-1512-43F2-922A-7D2526B158E3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SportsApp/Model/NetworkModel/NetworkService.swift"
+            filePath = "SportsApp/ViewModel/LeaguesViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "NetworkService"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4309605F-21F8-4B88-9962-6E43EE55420E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SportsApp/Model/NetworkModel/NetworkService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "getLatestAndUpcomingEvents(completion:)"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "getLeagues()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C2EC0078-6CA6-452F-8F01-7E94DA4305AC"
+            uuid = "47404DC9-8026-4C5E-95A6-D581BAC503D2"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SportsApp/View/ViewControllers/LeaguesDetailsViewController.swift"
+            filePath = "SportsApp/View/ViewControllers/LeaguesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "didReceiveData()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E66FAEC3-1A90-4F59-ADFC-15EAFE87D35D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportsApp/ViewModel/LeaguesViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "Leagues"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

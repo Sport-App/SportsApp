@@ -10,10 +10,13 @@ import SDWebImage
 
 class LeaguesDetailsViewController: UIViewController {
 
-    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var favBtn: UIButton!
+    @IBOutlet weak var upcomingLbl: UILabel!
     @IBOutlet weak var upcomingCollectionView: UICollectionView!
+    @IBOutlet weak var latestLbl: UILabel!
     @IBOutlet weak var latestTableView: UITableView!
+    @IBOutlet weak var teamsLbl: UILabel!
     @IBOutlet weak var teamsCollectionView: UICollectionView!
     
     var latestEvent = [Event]()
@@ -22,15 +25,24 @@ class LeaguesDetailsViewController: UIViewController {
     var viewModel: LeaguesDetailsViewModel!
     var leagueName = String()
     var leagueId = String()
+    var leagueDetails: LeagueDetails!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        titleLbl.text = leagueName
 
-        viewModel = LeaguesDetailsViewModel(leagueName: leagueName, leagueId: leagueId)
+        viewModel = LeaguesDetailsViewModel(leagueName: leagueName, leagueId: leagueId, appDelegate: UIApplication.shared.delegate as! AppDelegate)
         viewModel.bindupcomingEventToView = didReceiveUpcomingEvent
         viewModel.bindlatestEventToView = didReceiveLatestEvent
         viewModel.bindTeamsToView = didReceiveTeams
         viewModel.bindErrortoView = didReceiveError
         viewModel.getTeams()
+        
+        if viewModel.isFav(leaguesName: leagueName) {
+            favBtn.tintColor = .red
+        }else{
+            favBtn.tintColor = .white
+        }
     }
     
     func didReceiveUpcomingEvent() {
@@ -63,8 +75,12 @@ class LeaguesDetailsViewController: UIViewController {
     @IBAction func favAction(_ sender: Any) {
         if favBtn.tintColor == .red {
             favBtn.tintColor = .white
+            
+            viewModel.deleteLeague(leagueName: leagueName)
         }else{
             favBtn.tintColor = .red
+            
+            viewModel.addLeague(league: leagueDetails)
         }
     }
 }
@@ -73,8 +89,10 @@ extension LeaguesDetailsViewController: UITableViewDelegate, UITableViewDataSour
     func numberOfSections(in tableView: UITableView) -> Int {
         if latestEvent.count == 0 {
             latestTableView.isHidden = true
+            latestLbl.isHidden = true
         }else{
             latestTableView.isHidden = false
+            latestLbl.isHidden = false
         }
         
         return latestEvent.count
@@ -130,8 +148,10 @@ extension LeaguesDetailsViewController: UICollectionViewDelegate, UICollectionVi
             
             if upcomingEvent.count == 0 {
                 upcomingCollectionView.isHidden = true
+                upcomingLbl.isHidden = true
             }else{
                 upcomingCollectionView.isHidden = false
+                upcomingLbl.isHidden = false
             }
             
             return upcomingEvent.count
@@ -139,8 +159,10 @@ extension LeaguesDetailsViewController: UICollectionViewDelegate, UICollectionVi
             
             if teams.count == 0 {
                 teamsCollectionView.isHidden = true
+                teamsLbl.isHidden = true
             }else{
                 teamsCollectionView.isHidden = false
+                teamsLbl.isHidden = false
             }
             
             return teams.count
@@ -169,11 +191,11 @@ extension LeaguesDetailsViewController: UICollectionViewDelegate, UICollectionVi
                 }
             }
             
-            if let homeTeam = latestEvent[indexPath.row].strHomeTeam {
+            if let homeTeam = upcomingEvent[indexPath.row].strHomeTeam {
                 cell.teamHomeLbl.text = homeTeam
             }
             
-            if let teamAway = latestEvent[indexPath.row].strAwayTeam {
+            if let teamAway = upcomingEvent[indexPath.row].strAwayTeam {
                 cell.teamAwayLbl.text = teamAway
             }
             
@@ -195,6 +217,20 @@ extension LeaguesDetailsViewController: UICollectionViewDelegate, UICollectionVi
             return UICollectionViewCell()
         }
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch collectionView {
+        case teamsCollectionView:
+            let vc = storyboard?.instantiateViewController(withIdentifier: "TeamDetailsViewController") as! TeamDetailsViewController
+            vc.modalPresentationStyle = .fullScreen
+            vc.teamId = teams[indexPath.row].idTeam
+            present(vc, animated: true, completion: nil)
+            break
+            
+        default:
+            break
+        }
     }
 }
 

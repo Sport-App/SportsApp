@@ -19,7 +19,7 @@ class TeamList: Codable {
 class Team: Codable {
         
     var name : String
-    var stadium : String
+    var stadium : String?
     var country : String
     var league : String
     var imageMain : String

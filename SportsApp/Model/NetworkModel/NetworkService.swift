@@ -99,9 +99,10 @@ class NetworkService: DataSourceDelegate {
                     
                     let events = data.events
                     
-                    guard let round = events![0].intRound else { return }
+                    guard let event = events else { return }
+                    guard let round = event[0].intRound else { return }
                     
-                    self.getUpcomingEvents(round: "\(Int(round)! + 1)", season: events![0].strSeason) { (upcomingEvent, error) in
+                    self.getUpcomingEvents(round: "\(Int(round)! + 1)", season: event[0].strSeason) { (upcomingEvent, error) in
                         if let error = error {
                             completion(events, nil, error)
                         }else {

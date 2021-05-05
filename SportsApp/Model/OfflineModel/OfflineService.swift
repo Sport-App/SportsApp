@@ -53,12 +53,27 @@ class OfflineService : DataSourceDelegate {
             print(error.localizedDescription)
         }
     }
+    
+    func isExist(name : String) -> Bool{
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FavLeagues")
+        fetchRequest.predicate = NSPredicate(format: "name == %@", name)
+        do {
+            let leagues = try managedContext.fetch(fetchRequest) as! [FavLeagues]
+            
+            return leagues.count != 0
+        } catch let error as NSError {
+            print(error.localizedDescription)
+            
+            return false
+        }
+    }
+    
     func add(league:LeagueDetails){
         let leagueEntity = NSManagedObject(entity: entity, insertInto: managedContext)
         leagueEntity.setValue(league.strLeague, forKey: "name")
         leagueEntity.setValue(league.strYoutube, forKey: "youtube")
         leagueEntity.setValue(league.strBadge, forKey: "image")
-        leagueEntity.setValue("", forKey: "id")
+        leagueEntity.setValue(league.idLeague, forKey: "id")
         do {
             try self.managedContext.save()
         } catch let error as NSError {

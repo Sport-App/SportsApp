@@ -83,8 +83,10 @@ class TeamDetailsViewController: UIViewController {
     }
     func didReceiveError() {
         indec.stopAnimating()
-        let alert = UIAlertController(title: "Error", message: viewModel.error, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        let alert = UIAlertController(title: "Sorry", message: "No teame's data found", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (UIAlertAction) in
+            self.dismiss(animated: true, completion: nil)
+        }))
         present(alert, animated: true, completion: nil)
     }
     /*

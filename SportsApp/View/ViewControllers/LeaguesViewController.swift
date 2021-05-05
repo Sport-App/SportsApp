@@ -21,13 +21,25 @@ class LeaguesViewController: UIViewController {
     var type: ViewType = .fav
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if(type == .details){
+            reloadData()
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         if(type == .fav){
             backView.isHidden = true
+            
+            reloadData()
         }
+    }
+    
+    func reloadData() {
         viewModel = LeaguesViewModel(sportsName: sportName , type: type , appDelegate: UIApplication.shared.delegate as! AppDelegate)
-        viewModel.getLeagues()
         viewModel.bindLeaguestoView = didReceiveData
         viewModel.bindErrortoView = didReceiveError
+        viewModel.getLeagues()
     }
     
     func didReceiveData() {
@@ -75,11 +87,18 @@ extension LeaguesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "LeaguesDetailsViewController") as! LeaguesDetailsViewController
-        vc.modalPresentationStyle = .fullScreen
-        vc.leagueId = leaguesDetails[indexPath.section].idLeague
-        vc.leagueName = leaguesDetails[indexPath.section].strLeague!
-        present(vc, animated: true, completion: nil)
+        if Reachability.isConnectedToNetwork() {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "LeaguesDetailsViewController") as! LeaguesDetailsViewController
+            vc.modalPresentationStyle = .fullScreen
+            vc.leagueId = leaguesDetails[indexPath.section].idLeague
+            vc.leagueName = leaguesDetails[indexPath.section].strLeague!
+            vc.leagueDetails = leaguesDetails[indexPath.section]
+            present(vc, animated: true, completion: nil)
+        }else{
+            let alert = UIAlertController(title: "Sorry", message: "No internet connection", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
     }
     
     @objc func youtubeAction(button: UIButton){
