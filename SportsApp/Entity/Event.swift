@@ -8,19 +8,19 @@
 import Foundation
 
 class EventsList: Codable {
-    var events: [Event]
+    var events: [Event]?
 }
 
 class Event: Codable {
     var idEvent: String
     var strSeason: String
-    var strHomeTeam: String
-    var strAwayTeam: String
+    var strHomeTeam: String?
+    var strAwayTeam: String?
     var intHomeScore: String?
-    var intRound: String
+    var intRound: String?
     var intAwayScore: String?
-    var idHomeTeam: String
-    var idAwayTeam: String
+    var idHomeTeam: String?
+    var idAwayTeam: String?
     var dateEvent: String
 }
 

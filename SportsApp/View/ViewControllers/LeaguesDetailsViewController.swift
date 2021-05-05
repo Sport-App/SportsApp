@@ -71,6 +71,12 @@ class LeaguesDetailsViewController: UIViewController {
 
 extension LeaguesDetailsViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
+        if latestEvent.count == 0 {
+            latestTableView.isHidden = true
+        }else{
+            latestTableView.isHidden = false
+        }
+        
         return latestEvent.count
     }
     
@@ -82,22 +88,32 @@ extension LeaguesDetailsViewController: UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "latest", for: indexPath) as! LatestTableViewCell
         
         for item in teams {
-            if item.idTeam == latestEvent[indexPath.row].idHomeTeam {
+            if item.idTeam == latestEvent[indexPath.section].idHomeTeam {
                 if let badge = item.strTeamBadge {
                     cell.teamHomeImage.sd_setImage(with: URL(string: badge), completed: nil)
                 }
             }
             
-            else if item.idTeam == latestEvent[indexPath.row].idAwayTeam {
+            else if item.idTeam == latestEvent[indexPath.section].idAwayTeam {
                 if let badge = item.strTeamBadge {
                     cell.teamawayImage.sd_setImage(with: URL(string: badge), completed: nil)
                 }
             }
         }
-        cell.teamHomeLbl.text = latestEvent[indexPath.row].strHomeTeam
-        cell.teamAwayLbl.text = latestEvent[indexPath.row].strAwayTeam
-        cell.resultLbl.text = latestEvent[indexPath.row].intHomeScore! + "  VS  " + latestEvent[indexPath.row].intAwayScore!
-        cell.dateLbl.text = latestEvent[indexPath.row].dateEvent
+        
+        if let homeTeam = latestEvent[indexPath.section].strHomeTeam {
+            cell.teamHomeLbl.text = homeTeam
+        }
+        
+        if let teamAway = latestEvent[indexPath.section].strAwayTeam {
+            cell.teamAwayLbl.text = teamAway
+        }
+        
+        if let homeScore = latestEvent[indexPath.section].intHomeScore, let awayScore = latestEvent[indexPath.section].intAwayScore {
+            cell.resultLbl.text = homeScore + "  VS  " + awayScore
+        }
+        
+        cell.dateLbl.text = latestEvent[indexPath.section].dateEvent
         
         return cell
     }
@@ -111,8 +127,22 @@ extension LeaguesDetailsViewController: UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case upcomingCollectionView:
+            
+            if upcomingEvent.count == 0 {
+                upcomingCollectionView.isHidden = true
+            }else{
+                upcomingCollectionView.isHidden = false
+            }
+            
             return upcomingEvent.count
         case teamsCollectionView:
+            
+            if teams.count == 0 {
+                teamsCollectionView.isHidden = true
+            }else{
+                teamsCollectionView.isHidden = false
+            }
+            
             return teams.count
         default:
             return 0
@@ -138,8 +168,15 @@ extension LeaguesDetailsViewController: UICollectionViewDelegate, UICollectionVi
                     }
                 }
             }
-            cell.teamHomeLbl.text = upcomingEvent[indexPath.row].strHomeTeam
-            cell.teamAwayLbl.text = upcomingEvent[indexPath.row].strAwayTeam
+            
+            if let homeTeam = latestEvent[indexPath.row].strHomeTeam {
+                cell.teamHomeLbl.text = homeTeam
+            }
+            
+            if let teamAway = latestEvent[indexPath.row].strAwayTeam {
+                cell.teamAwayLbl.text = teamAway
+            }
+            
             cell.dateLbl.text = upcomingEvent[indexPath.row].dateEvent
             
             return cell
@@ -150,6 +187,7 @@ extension LeaguesDetailsViewController: UICollectionViewDelegate, UICollectionVi
             if let badge = teams[indexPath.row].strTeamBadge {
                 cell.teamImage.sd_setImage(with: URL(string: badge), completed: nil)
             }
+            
             cell.teamLbl.text = teams[indexPath.row].strTeam
             
             return cell
@@ -161,8 +199,8 @@ extension LeaguesDetailsViewController: UICollectionViewDelegate, UICollectionVi
 }
 
 extension LeaguesDetailsViewController : UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let d = (view.frame.width / 2) - 20
-        return CGSize(width: d, height: d)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let d = (view.frame.width / 2) - 20
+//        return CGSize(width: d, height: d)
+//    }
 }

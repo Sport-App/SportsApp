@@ -9,7 +9,7 @@ import Foundation
 
 class LeaguesDetailsViewModel {
     let factory = FactoryService()
-    var networkService: NetworkService!
+    var networkService = NetworkService()
     
     init(leagueName: String, leagueId: String) {
         networkService.leagueName = leagueName
@@ -49,9 +49,14 @@ class LeaguesDetailsViewModel {
         networkService.getLatestAndUpcomingEvents { (latestEvent, upcomingEvent, error) in
             if let error = error {
                 self.error = error.localizedDescription
-            }else{
-                self.latestEvent = latestEvent!
-                self.upcomingEvent = upcomingEvent!
+            }
+            
+            if let latestEvent = latestEvent {
+                self.latestEvent = latestEvent
+            }
+                
+            if let upcomingEvent = upcomingEvent {
+                self.upcomingEvent = upcomingEvent
             }
         }
     }

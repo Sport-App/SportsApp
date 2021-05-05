@@ -18,7 +18,7 @@ class URLs {
         return baseUrl + "eventspastleague.php?id=\(leagueId)"
     }
     static func getLeagueTeams(leagueName: String) -> String {
-        return baseUrl + "search_all_teams.php?l=\(leagueName)"
+        return baseUrl + "search_all_teams.php?l=\(leagueName)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
     }
     static func getUpcomingEvent(leagueId: String, round: String, season: String) -> String {
         return baseUrl + "eventsround.php?id=\(leagueId)&r=\(round)&s=\(season)"
