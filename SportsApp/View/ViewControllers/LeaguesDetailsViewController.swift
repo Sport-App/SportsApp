@@ -18,7 +18,7 @@ class LeaguesDetailsViewController: UIViewController {
     
     var latestEvent = [Event]()
     var upcomingEvent = [Event]()
-    var teams = [Team]()
+    var teams = [Teams]()
     var viewModel: LeaguesDetailsViewModel!
     var leagueName = String()
     var leagueId = String()

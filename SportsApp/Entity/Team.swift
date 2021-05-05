@@ -8,10 +8,10 @@
 import Foundation
 
 class TeamsList: Codable {
-    var teams: [Team]
+    var teams: [Teams]
 }
 
-class Team: Codable {
+class Teams: Codable {
     var idTeam: String
     var strTeam: String
     var strTeamBadge: String?
