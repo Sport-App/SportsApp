@@ -16,7 +16,7 @@ class SportsViewModelTest: XCTestCase {
     sportsViewModel = SportsViewModel()
         sportsViewModel.bindSportstoView = didReceiveData
         sportsViewModel.bindErrortoView = didReceiveError
-    expecttionObj = expectation(description: "Wait for response")
+        expecttionObj = expectation(description: "Wait for response")
     }
 
     override func tearDownWithError() throws {
