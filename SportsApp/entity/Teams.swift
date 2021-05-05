@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class Teams: Codable {
+class TeamList: Codable {
     
     var teams : [Team]
         

@@ -32,7 +32,7 @@ class NetworkService: DataSourceDelegate {
         }
     }
     func getTeamById(id : String,completion: @escaping (Team?, Error?) -> ()) {
-        AF.request(URLs.getTeamDetailsById+id).validate().responseDecodable(of: Teams.self) { (response) in
+        AF.request(URLs.getTeamDetailsById+id).validate().responseDecodable(of: TeamList.self) { (response) in
             
             switch response.result {
                 case .success( _):
