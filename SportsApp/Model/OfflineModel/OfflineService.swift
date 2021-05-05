@@ -29,7 +29,8 @@ class OfflineService : DataSourceDelegate {
         do {
             let leagues = try self.managedContext.fetch(fetchRequest) as! [FavLeagues]
             for league in leagues{
-                let leagueDetails = LeagueDetails(id: league.id!, youtube: league.youtube!, badge: league.image!, league: league.name!)
+                
+                let leagueDetails = LeagueDetails(id: league.id ?? "", youtube: league.youtube ?? "", badge: league.image ?? "", league: league.name ?? "")
 //                leagueDetails.strLeague = league.name
 //                leagueDetails.strBadge = league.image
 //                leagueDetails.strYoutube = league.youtube
