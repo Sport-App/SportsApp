@@ -135,7 +135,7 @@ class NetworkService: DataSourceDelegate {
         }
     }
     
-    func getTeams(completion: @escaping ([Team]?, Error?) -> ()) {
+    func getTeams(completion: @escaping ([Teams]?, Error?) -> ()) {
         AF.request(URLs.getLeagueTeams(leagueName: leagueName)).validate().responseDecodable(of: TeamsList.self) { (response) in
             
             switch response.result {

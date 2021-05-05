@@ -28,7 +28,7 @@ class LeaguesDetailsViewModel {
         }
     }
     
-    var teams: [Team]! {
+    var teams: [Teams]! {
         didSet{
             bindTeamsToView()
         }
