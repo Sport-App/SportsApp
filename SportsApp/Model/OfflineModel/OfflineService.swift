@@ -9,6 +9,8 @@ import Foundation
 import CoreData
 
 class OfflineService : DataSourceDelegate {
+    var leagueName = String()
+    var leagueId = String()
     var sportsName = String()
     var managedContext :NSManagedObjectContext
     var entity : NSEntityDescription
@@ -27,10 +29,11 @@ class OfflineService : DataSourceDelegate {
         do {
             let leagues = try self.managedContext.fetch(fetchRequest) as! [FavLeagues]
             for league in leagues{
-                let leagueDetails = LeagueDetails()
-                leagueDetails.strLeague = league.name
-                leagueDetails.strBadge = league.image
-                leagueDetails.strYoutube = league.youtube
+                
+                let leagueDetails = LeagueDetails(id: league.id ?? "", youtube: league.youtube ?? "", badge: league.image ?? "", league: league.name ?? "")
+//                leagueDetails.strLeague = league.name
+//                leagueDetails.strBadge = league.image
+//                leagueDetails.strYoutube = league.youtube
                 list.append(leagueDetails)
             }
             completion(list,nil)

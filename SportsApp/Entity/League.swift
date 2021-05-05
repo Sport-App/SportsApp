@@ -25,8 +25,16 @@ class LeagueDetailsList: Codable {
 
 
 class LeagueDetails: Codable {
+    var idLeague: String
     var strYoutube: String?
     var strBadge: String?
     var strLeague: String?
+    
+    init(id: String, youtube: String, badge: String, league: String) {
+        idLeague = id
+        strLeague = league
+        strYoutube = youtube
+        strBadge = badge
+    }
 }
 

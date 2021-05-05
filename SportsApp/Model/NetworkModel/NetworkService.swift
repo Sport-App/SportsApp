@@ -12,6 +12,8 @@ class NetworkService: DataSourceDelegate {
     
     var LeaguesDetails = [LeagueDetails]()
     var sportsName = String()
+    var leagueName = String()
+    var leagueId = String()
     
     func getSports(completion: @escaping ([Sport]?, Error?) -> ()) {
         AF.request(URLs.getSports).validate().responseDecodable(of: Sports.self) { (response) in
@@ -83,6 +85,70 @@ class NetworkService: DataSourceDelegate {
                     completion(nil, error)
                     print(error)
                     
+            }
+        }
+    }
+    
+    func getLatestAndUpcomingEvents(completion: @escaping ([Event]?, [Event]?, Error?) -> ()) {
+        AF.request(URLs.getLatestEvent(leagueId: leagueId)).validate().responseDecodable(of: EventsList.self) { (response) in
+            
+            switch response.result {
+                case .success( _):
+                        
+                    guard let data = response.value else { return }
+                    
+                    let events = data.events
+                    
+                    guard let round = events![0].intRound else { return }
+                    
+                    self.getUpcomingEvents(round: "\(Int(round)! + 1)", season: events![0].strSeason) { (upcomingEvent, error) in
+                        if let error = error {
+                            completion(events, nil, error)
+                        }else {
+                            completion(events, upcomingEvent, nil)
+                        }
+                    }
+                    
+                case .failure(let error):
+                    
+                    print(error)
+                    completion(nil, nil, error)
+            }
+        }
+    }
+    
+    func getUpcomingEvents(round: String, season: String, completion: @escaping ([Event]?, Error?) -> ()) {
+        AF.request(URLs.getUpcomingEvent(leagueId: leagueId, round: round, season: season)).validate().responseDecodable(of: EventsList.self) { (response) in
+            
+            switch response.result {
+                case .success( _):
+                        
+                    guard let data = response.value else { return }
+                    
+                    completion(data.events, nil)
+                    
+                case .failure(let error):
+                    
+                    print(error)
+                    completion(nil, error)
+            }
+        }
+    }
+    
+    func getTeams(completion: @escaping ([Team]?, Error?) -> ()) {
+        AF.request(URLs.getLeagueTeams(leagueName: leagueName)).validate().responseDecodable(of: TeamsList.self) { (response) in
+            
+            switch response.result {
+                case .success( _):
+                        
+                    guard let data = response.value else { return }
+                    
+                    completion(data.teams, nil)
+                    
+                case .failure(let error):
+                    
+                    print(error)
+                    completion(nil, error)
             }
         }
     }
