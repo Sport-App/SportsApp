@@ -8,10 +8,11 @@
 import UIKit
 import Alamofire
 import SDWebImage
-
+import Lottie
 class SportsViewController: UIViewController {
     
     @IBOutlet weak var collection: UICollectionView!
+    @IBOutlet weak var animationView: AnimationView!
     
     var sports = [Sport]()
     var viewModel = SportsViewModel()
@@ -22,8 +23,15 @@ class SportsViewController: UIViewController {
         viewModel.getSports()
         viewModel.bindSportstoView = didReceiveData
         viewModel.bindErrortoView = didReceiveError
+        collection.layer.cornerRadius = 15
+       
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        animationView.contentMode = .scaleAspectFit
+         animationView.loopMode = .loop
+         animationView.animationSpeed = 3
+         animationView.play()
+    }
     func didReceiveData() {
         sports = viewModel.sports
         collection.reloadData()

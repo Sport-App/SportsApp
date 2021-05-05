@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.4.2)
   - IQKeyboardManagerSwift (6.5.6)
+  - lottie-ios (3.2.2)
   - SDWebImage (5.11.0):
     - SDWebImage/Core (= 5.11.0)
   - SDWebImage/Core (5.11.0)
@@ -8,19 +9,22 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - IQKeyboardManagerSwift
+  - lottie-ios
   - SDWebImage
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - IQKeyboardManagerSwift
+    - lottie-ios
     - SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  lottie-ios: a033bb989eea77d9f99cc4e2bbdd3788229761ad
   SDWebImage: 7acbb57630ac7db4a495547fb73916ff3e432f6b
 
-PODFILE CHECKSUM: 0677a00578df9651b0a43eca75c546b6dfb32c7e
+PODFILE CHECKSUM: b0e620505daf666864b330037113039d58ff4248
 
 COCOAPODS: 1.10.1

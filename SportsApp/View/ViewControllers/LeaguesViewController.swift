@@ -21,6 +21,7 @@ class LeaguesViewController: UIViewController {
     var type: ViewType = .fav
     override func viewDidLoad() {
         super.viewDidLoad()
+        leagueTableView.layer.cornerRadius = 25
         
         if(type == .details){
             reloadData()
@@ -82,7 +83,7 @@ extension LeaguesViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.leagueYoutubeButton.tag = indexPath.section
         cell.leagueYoutubeButton.addTarget(self, action: #selector(youtubeAction(button:)), for: .touchUpInside)
-        
+        cell.layer.cornerRadius = 25
         return cell
     }
     

@@ -132,7 +132,8 @@ extension LeaguesDetailsViewController: UITableViewDelegate, UITableViewDataSour
         }
         
         cell.dateLbl.text = latestEvent[indexPath.section].dateEvent
-        
+        cell.layer.cornerRadius = 25
+
         return cell
     }
 }
@@ -200,7 +201,8 @@ extension LeaguesDetailsViewController: UICollectionViewDelegate, UICollectionVi
             }
             
             cell.dateLbl.text = upcomingEvent[indexPath.row].dateEvent
-            
+            cell.layer.cornerRadius = 25
+
             return cell
         case teamsCollectionView:
             
@@ -211,7 +213,7 @@ extension LeaguesDetailsViewController: UICollectionViewDelegate, UICollectionVi
             }
             
             cell.teamLbl.text = teams[indexPath.row].strTeam
-            
+            cell.layer.cornerRadius = 25
             return cell
         default:
             return UICollectionViewCell()

@@ -38,7 +38,9 @@
 		D3FC22172633278500D803A4 /* DataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC22162633278500D803A4 /* DataSourceDelegate.swift */; };
 		D3FC222C2633375600D803A4 /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC22292633375600D803A4 /* Sport.swift */; };
 		D3FC222D2633375600D803A4 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC222A2633375600D803A4 /* League.swift */; };
+		E22743982643311F0066BF14 /* lotte.json in Resources */ = {isa = PBXBuildFile; fileRef = E22743972643311F0066BF14 /* lotte.json */; };
 		E2598EB62641F07100549C55 /* CoreDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2598EB52641F07100549C55 /* CoreDataTest.swift */; };
+		E28BA37626433E97000091A7 /* splash.json in Resources */ = {isa = PBXBuildFile; fileRef = E28BA37526433E97000091A7 /* splash.json */; };
 		E290DC14263A2D6600389702 /* SportsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290DC13263A2D6600389702 /* SportsViewModelTest.swift */; };
 		E290DC19263A377C00389702 /* TeamViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290DC18263A377C00389702 /* TeamViewModelTest.swift */; };
 		E2D10B702638D30E006EF30E /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D10B6F2638D30E006EF30E /* TeamDetailsViewController.swift */; };
@@ -109,7 +111,9 @@
 		D3FC22162633278500D803A4 /* DataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceDelegate.swift; sourceTree = "<group>"; };
 		D3FC22292633375600D803A4 /* Sport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
 		D3FC222A2633375600D803A4 /* League.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		E22743972643311F0066BF14 /* lotte.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lotte.json; sourceTree = "<group>"; };
 		E2598EB52641F07100549C55 /* CoreDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTest.swift; sourceTree = "<group>"; };
+		E28BA37526433E97000091A7 /* splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash.json; sourceTree = "<group>"; };
 		E290DC13263A2D6600389702 /* SportsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsViewModelTest.swift; sourceTree = "<group>"; };
 		E290DC18263A377C00389702 /* TeamViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModelTest.swift; sourceTree = "<group>"; };
 		E2D10B6F2638D30E006EF30E /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
@@ -210,7 +214,6 @@
 				D3FC22272633375600D803A4 /* Entity */,
 				D3C372A4262E24A500C25080 /* AppDelegate.swift */,
 				D3C372A6262E24A500C25080 /* SceneDelegate.swift */,
-				D3C372A8262E24A500C25080 /* ViewController.swift */,
 				D3C372B0262E24A800C25080 /* Assets.xcassets */,
 				D3C372B2262E24A800C25080 /* LaunchScreen.storyboard */,
 				D3C372B5262E24A800C25080 /* Info.plist */,
@@ -254,6 +257,8 @@
 		D3FC21D12633102A00D803A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E28BA37526433E97000091A7 /* splash.json */,
+				E22743972643311F0066BF14 /* lotte.json */,
 				D3FC21D62633114700D803A4 /* ViewCells */,
 				D3FC21D42633111D00D803A4 /* ViewControllers */,
 				D3C372AA262E24A500C25080 /* Main.storyboard */,
@@ -283,6 +288,7 @@
 		D3FC21D42633111D00D803A4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D3C372A8262E24A500C25080 /* ViewController.swift */,
 				D39549552630A536000B9D29 /* LeaguesViewController.swift */,
 				D3FC21F9263319C000D803A4 /* SportsViewController.swift */,
 				E2D10B6F2638D30E006EF30E /* TeamDetailsViewController.swift */,
@@ -450,8 +456,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3C372B4262E24A800C25080 /* LaunchScreen.storyboard in Resources */,
+				E22743982643311F0066BF14 /* lotte.json in Resources */,
 				D3C372B1262E24A800C25080 /* Assets.xcassets in Resources */,
 				D3C372AC262E24A500C25080 /* Main.storyboard in Resources */,
+				E28BA37626433E97000091A7 /* splash.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

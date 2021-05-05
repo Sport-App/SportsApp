@@ -19,5 +19,7 @@ target 'SportsApp' do
 pod 'SDWebImage'
 pod 'Alamofire'
 pod 'IQKeyboardManagerSwift'
+pod 'lottie-ios'
+
 
 end
