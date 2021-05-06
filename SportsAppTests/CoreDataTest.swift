@@ -29,7 +29,7 @@ class CoreDataTest: XCTestCase {
     }
     
     func testAdd() throws {
-        let leage = LeagueDetails()
+        let leage = LeagueDetails(id: "1", youtube: "youtube", badge: "badge", league: "league")
         leage.strBadge = "1"
         leage.strLeague = "football"
         leage.strYoutube = "youtube"
