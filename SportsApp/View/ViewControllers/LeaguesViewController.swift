@@ -18,6 +18,7 @@ class LeaguesViewController: UIViewController {
     var leaguesDetails = [LeagueDetails]()
     var sportName = "Soccer"
     var viewModel: LeaguesViewModel!
+    var temp : [LeagueDetails]?
     var type: ViewType = .fav
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,7 @@ class LeaguesViewController: UIViewController {
     
     func didReceiveData() {
         leaguesDetails = viewModel.Leagues
+        temp = viewModel.Leagues
         leagueTableView.reloadData()
     }
     
@@ -115,7 +117,12 @@ extension LeaguesViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension LeaguesViewController: UISearchBarDelegate {
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        
+   
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        leaguesDetails = searchText.isEmpty ? temp! : temp!.filter { (item: LeagueDetails) -> Bool in
+            return item.strLeague!.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+        }
+        self.leagueTableView.reloadData()
+
     }
 }
