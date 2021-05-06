@@ -11,6 +11,7 @@ import SDWebImage
 import Lottie
 class SportsViewController: UIViewController {
     
+    @IBOutlet weak var animationViewConn: AnimationView!
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var animationView: AnimationView!
     
@@ -20,9 +21,9 @@ class SportsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.getSports()
         viewModel.bindSportstoView = didReceiveData
         viewModel.bindErrortoView = didReceiveError
+        viewModel.getSports()
         collection.layer.cornerRadius = 15
        
     }
@@ -31,16 +32,26 @@ class SportsViewController: UIViewController {
          animationView.loopMode = .loop
          animationView.animationSpeed = 3
          animationView.play()
+        animationViewConn.contentMode = .scaleAspectFit
+         animationViewConn.loopMode = .loop
+         animationViewConn.animationSpeed = 1
+         animationViewConn.play()
     }
     func didReceiveData() {
         sports = viewModel.sports
         collection.reloadData()
+        collection.isHidden = false
+        animationView.isHidden = false
+
     }
     
     func didReceiveError() {
         let alert = UIAlertController(title: "Error", message: viewModel.error, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
+        collection.isHidden = true
+        animationView.isHidden = true
+        
     }
 }
 

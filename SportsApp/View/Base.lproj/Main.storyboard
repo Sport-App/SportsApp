@@ -383,7 +383,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="65C-sG-FYx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2739" y="338"/>
+            <point key="canvasLocation" x="2737.68115942029" y="337.5"/>
         </scene>
         <!--Sports-->
         <scene sceneID="VPI-SY-LtT">
@@ -393,6 +393,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h9Y-LV-iUh" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="JXp-2h-2c9"/>
+                                    <constraint firstAttribute="width" constant="200" id="iG1-Oi-PeE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="no_Internet"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Y0-Cb-ym4">
                                 <rect key="frame" x="12" y="144" width="390" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -507,7 +518,9 @@
                             <constraint firstItem="2Y0-Cb-ym4" firstAttribute="top" secondItem="6j8-l2-4t0" secondAttribute="top" constant="100" id="GpX-Sx-zHP"/>
                             <constraint firstItem="2Y0-Cb-ym4" firstAttribute="leading" secondItem="6j8-l2-4t0" secondAttribute="leading" constant="12" id="ZCi-Ys-EJZ"/>
                             <constraint firstAttribute="bottom" secondItem="2Y0-Cb-ym4" secondAttribute="bottom" constant="85" id="aGe-LN-rvd"/>
+                            <constraint firstItem="h9Y-LV-iUh" firstAttribute="centerY" secondItem="6VW-6U-4yd" secondAttribute="centerY" id="f8O-Nj-CDd"/>
                             <constraint firstItem="6j8-l2-4t0" firstAttribute="trailing" secondItem="SPn-jA-kIs" secondAttribute="trailing" id="hyA-QI-fgK"/>
+                            <constraint firstItem="h9Y-LV-iUh" firstAttribute="centerX" secondItem="6VW-6U-4yd" secondAttribute="centerX" id="ioG-zE-JyB"/>
                             <constraint firstItem="SPn-jA-kIs" firstAttribute="top" secondItem="6VW-6U-4yd" secondAttribute="top" constant="20" id="jrb-G9-ZkZ"/>
                             <constraint firstItem="6j8-l2-4t0" firstAttribute="trailing" secondItem="2Y0-Cb-ym4" secondAttribute="trailing" constant="12" id="wch-1l-x71"/>
                         </constraints>
@@ -515,6 +528,7 @@
                     <tabBarItem key="tabBarItem" title="Sports" image="sportscourt" catalog="system" id="iEu-DN-ASx"/>
                     <connections>
                         <outlet property="animationView" destination="SPn-jA-kIs" id="Km8-wn-pMf"/>
+                        <outlet property="animationViewConn" destination="h9Y-LV-iUh" id="H8I-3k-p2w"/>
                         <outlet property="collection" destination="2Y0-Cb-ym4" id="UOe-zi-lp3"/>
                     </connections>
                 </viewController>
@@ -1016,7 +1030,6 @@
         <!--View Controller-->
         <scene sceneID="qTL-sa-PY7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8uc-MJ-dgl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="NSc-i6-Ol7" customClass="ViewController" customModule="SportsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zdL-vU-wAh" customClass="AnimationView" customModule="Lottie">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -1031,6 +1044,7 @@
                         <outlet property="animationView" destination="zdL-vU-wAh" id="clr-vg-GEY"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8uc-MJ-dgl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="120" y="88"/>
         </scene>
@@ -1057,6 +1071,7 @@
     </scenes>
     <designables>
         <designable name="SPn-jA-kIs"/>
+        <designable name="h9Y-LV-iUh"/>
         <designable name="zdL-vU-wAh"/>
     </designables>
     <resources>

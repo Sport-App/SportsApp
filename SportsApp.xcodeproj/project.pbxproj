@@ -41,6 +41,7 @@
 		E22743982643311F0066BF14 /* lotte.json in Resources */ = {isa = PBXBuildFile; fileRef = E22743972643311F0066BF14 /* lotte.json */; };
 		E2598EB62641F07100549C55 /* CoreDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2598EB52641F07100549C55 /* CoreDataTest.swift */; };
 		E28BA37626433E97000091A7 /* splash.json in Resources */ = {isa = PBXBuildFile; fileRef = E28BA37526433E97000091A7 /* splash.json */; };
+		E28BA3AC26449308000091A7 /* no_Internet.json in Resources */ = {isa = PBXBuildFile; fileRef = E28BA3AB26449308000091A7 /* no_Internet.json */; };
 		E290DC14263A2D6600389702 /* SportsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290DC13263A2D6600389702 /* SportsViewModelTest.swift */; };
 		E290DC19263A377C00389702 /* TeamViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290DC18263A377C00389702 /* TeamViewModelTest.swift */; };
 		E2D10B702638D30E006EF30E /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D10B6F2638D30E006EF30E /* TeamDetailsViewController.swift */; };
@@ -114,6 +115,7 @@
 		E22743972643311F0066BF14 /* lotte.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lotte.json; sourceTree = "<group>"; };
 		E2598EB52641F07100549C55 /* CoreDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTest.swift; sourceTree = "<group>"; };
 		E28BA37526433E97000091A7 /* splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash.json; sourceTree = "<group>"; };
+		E28BA3AB26449308000091A7 /* no_Internet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = no_Internet.json; sourceTree = "<group>"; };
 		E290DC13263A2D6600389702 /* SportsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsViewModelTest.swift; sourceTree = "<group>"; };
 		E290DC18263A377C00389702 /* TeamViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModelTest.swift; sourceTree = "<group>"; };
 		E2D10B6F2638D30E006EF30E /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 		D3FC21D12633102A00D803A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E28BA3AB26449308000091A7 /* no_Internet.json */,
 				E28BA37526433E97000091A7 /* splash.json */,
 				E22743972643311F0066BF14 /* lotte.json */,
 				D3FC21D62633114700D803A4 /* ViewCells */,
@@ -456,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3C372B4262E24A800C25080 /* LaunchScreen.storyboard in Resources */,
+				E28BA3AC26449308000091A7 /* no_Internet.json in Resources */,
 				E22743982643311F0066BF14 /* lotte.json in Resources */,
 				D3C372B1262E24A800C25080 /* Assets.xcassets in Resources */,
 				D3C372AC262E24A500C25080 /* Main.storyboard in Resources */,

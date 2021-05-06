@@ -26,6 +26,7 @@ class SportsViewModel {
     var bindErrortoView: () -> () = {}
     
     func getSports() {
+        if Reachability.isConnectedToNetwork() {
         networkServic.getSports { (sport, error) in
             
             if let error = error {
@@ -33,6 +34,11 @@ class SportsViewModel {
             }else{
                 self.sports = sport
             }
+        }
+            
+        }else{
+            self.error = "no internet connection"
+            
         }
     }
 }
